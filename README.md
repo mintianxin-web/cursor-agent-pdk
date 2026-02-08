@@ -1,166 +1,214 @@
-# 🚀 Cursor AI Rules & Prompts Collection
+# Cursor AI 规则与提示词集合
 
-> **Transform your Cursor IDE into a powerful project management system using IC Design methodologies**
+> **让 Cursor IDE 成为你的智能项目管理和开发助手**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/mintianxin-web/cursor-ai-rules.svg?style=social)](https://github.com/mintianxin-web/cursor-ai-rules)
+[![GitHub stars](https://img.shields.io/github/stars/mintianxin-web/cursor-agent-pdk.svg?style=social)](https://github.com/mintianxin-web/cursor-agent-pdk)
 
-## ✨ What Makes This Special?
+## 是什么？
 
-This isn't just another AI prompt collection. It's a **complete workflow system** that bridges the gap between hardware design thinking and software development. If you're an engineer who thinks in terms of **FPGA/ASIC**, **IP Cores**, and **Tape-out**, this is your perfect match.
+这是一个**完整的 Cursor IDE 规则和提示词集合**，帮助你更高效地使用 AI 辅助编程。它包含：
 
-### 🎯 Why You'll Love This
+- **工作流规则**：自动化的项目生命周期管理，从需求分析到代码部署
+- **智能模式切换**：根据任务类型自动选择最适合的工作模式
+- **安全保护机制**：防止误操作（如提交敏感信息、误删文件）
+- **专用提示词模板**：针对不同开发阶段的优化提示词
 
-- **🧠 Hardware-First Mental Models**: Think in terms you already know (Docker = SiP, API Keys = IP Licenses)
-- **⚡ Auto-Routing Intelligence**: Automatically selects the right mode (Standard/STDD/Tone) based on your task
-- **🛡️ Built-in Safety**: Never accidentally commit API keys or delete important files
-- **📊 State Machine Workflow**: Clear, structured project lifecycle from spec to deployment
-- **🔧 Ready-to-Use Prompts**: Four specialized architect prompts for different project phases
+### 核心功能
 
-## 🎬 Quick Start (30 seconds)
+- ✅ **自动模式识别**：根据任务自动选择标准模式、STDD 模式或写作模式
+- ✅ **状态机工作流**：清晰的项目开发流程，从需求到部署
+- ✅ **安全第一**：内置 API 密钥保护、文件删除确认等安全机制
+- ✅ **即用型提示词**：4 个专业提示词模板，覆盖项目全生命周期
 
-```bash
-# Clone this repository
-git clone https://github.com/mintianxin-web/cursor-ai-rules.git
+## 为什么？
 
-# Copy to your project
+### 解决的问题
+
+1. **开发效率低**：每次都要手动配置 Cursor 规则，重复劳动
+2. **项目结构混乱**：缺乏统一的工作流程和规范
+3. **安全隐患**：容易误提交 API 密钥等敏感信息
+4. **AI 使用不当**：不知道如何编写有效的提示词
+
+### 优势特点
+
+- **开箱即用**：复制文件即可使用，无需复杂配置
+- **智能自动化**：AI 自动识别任务类型并切换工作模式
+- **安全可靠**：多层安全保护，避免常见错误
+- **持续改进**：基于实际项目经验总结的最佳实践
+
+### 适用场景
+
+- 🎯 **个人项目开发**：快速启动新项目，规范开发流程
+- 🏢 **团队协作**：统一团队开发规范，提高协作效率
+- 📚 **学习实践**：学习如何更好地使用 AI 辅助编程
+- 🚀 **快速原型**：快速验证想法，加速产品迭代
+
+## 怎么用？
+
+### 快速开始（30 秒）
+
+\`\`\`bash
+# 1. 克隆仓库
+git clone https://github.com/mintianxin-web/cursor-agent-pdk.git
+
+# 2. 复制到你的项目
 cd your-project
-cp -r cursor-ai-rules/.cursorrules .
-cp -r cursor-ai-rules/cursor_prompts .
+cp cursor-agent-pdk/.cursorrules .
+cp -r cursor-agent-pdk/cursor_prompts .
 
-# That's it! Cursor IDE will automatically load the rules
-```
+# 3. 完成！Cursor IDE 会自动加载规则
+\`\`\`
 
-## 📁 What's Inside?
+### 详细使用指南
 
-```
-cursor-ai-rules/
-├── .cursorrules              # 🎯 Main rule engine (workspace-level)
-├── scratchpad.md             # 🧠 Project memory & state tracker
-├── cursor_prompts/           # 📚 Specialized prompt templates
-│   ├── 01_spec_architect.md    # Interviewer mode: Extract requirements
-│   ├── 02_stdd_architect.md    # Consultant mode: Make vs Buy decisions
-│   ├── 03_tone_stylist.md      # Mimicry mode: Match your writing style
-│   └── 04_code_reviewer.md     # LVS mode: Security & logic checks
-└── README.md                 # 📖 This file
-```
+#### 1. 基础配置
 
-## 🧩 The Mental Model (For IC Designers)
+将以下文件复制到你的项目根目录：
 
-| Software Concept | Hardware Analogy | Why It Matters |
-|-----------------|------------------|----------------|
-| **Docker** | Package / SiP | Containerized, reusable components |
-| **API Key** | IP Core License | External service access credentials |
-| **SQLite** | DMA/DDR Memory | Fast, local data storage |
-| **Next.js** | ASIC | Mass production, SEO optimized |
-| **Streamlit** | FPGA | Rapid prototyping, internal tools |
+- `.cursorrules` - 主规则文件（必需）
+- `cursor_prompts/` - 提示词模板文件夹（可选）
 
-## 🔄 The Workflow (6 States)
+#### 2. 开始新项目
 
-```
-STATE 0: Intent Classification → Auto-route to correct mode
-    ↓
-STATE 1: Spec Definition → Extract complete requirements
-    ↓
-STATE 2: Architecture Selection → FPGA (Streamlit) vs ASIC (Next.js)
-    ↓
-STATE 3: Pre-flight BOM → Check .env, permissions, dependencies
-    ↓
-STATE 4: Implementation Loop → Baby steps with auto-testing
-    ↓
-STATE 5: Deployment (Tape-out) → Git push & publish
-```
+当你对 Cursor 说 "新项目..." 或 "开始目标..." 时，系统会：
 
-## 💡 Real-World Example
+1. **自动识别任务类型**
+   - 简单/静态任务 → 标准模式
+   - 逻辑/数据/可靠性任务 → STDD 模式
+   - 写作/邮件任务 → 写作模式
 
-**You say:**
-```
-"New Project: Build a task management tool"
-```
+2. **引导需求分析**
+   - 提取完整的功能需求
+   - 确定技术选型
+   - 检查资源和权限
 
-**AI responds:**
-```
-⚡ Auto-Mux: Detected Logic/Data. Switching to Mode B (STDD). 
-Phase 1 Initiated.
+3. **执行开发流程**
+   - 分步骤实现功能
+   - 自动生成测试用例
+   - 代码审查和安全检查
 
-📋 Phase A1: Discovery
-- Domain: Tool/Dashboard
-- Access: Local or Public Web?
-- Data: Need persistent database?
-- Budget: Vercel/OpenAI accounts?
-```
+#### 3. 工作模式说明
 
-The system automatically routes you to the right workflow mode and guides you through each phase.
+| 模式 | 触发条件 | 适用场景 |
+|------|---------|---------|
+| **标准模式** | 简单/静态任务 | 快速脚本、静态网站、简单工具 |
+| **STDD 模式** | 逻辑/数据/可靠性任务 | 复杂应用、数据库操作、API 开发 |
+| **写作模式** | 写作/邮件任务 | 文档编写、邮件撰写、内容创作 |
 
-## 🎨 Three Modes, Three Purposes
+#### 4. 提示词模板使用
 
-| Mode | Trigger | Best For |
-|------|---------|----------|
-| **Mode A (Standard)** | Simple/Static tasks | Quick scripts, static sites |
-| **Mode B (STDD)** | Logic/Data/Reliability | Complex apps, databases, APIs |
-| **Mode C (Tone)** | Writing/Email | Content creation, documentation |
+项目包含 4 个专业提示词模板：
 
-## 🛡️ Safety First
+- **01_spec_architect.md** - 需求分析师：提取和整理项目需求
+- **02_stdd_architect.md** - 架构顾问：技术选型和架构设计
+- **03_tone_stylist.md** - 写作助手：匹配你的写作风格
+- **04_code_reviewer.md** - 代码审查：安全检查和质量控制
 
-- ✅ **API Key Protection**: Never hardcodes secrets (uses `os.getenv()`)
-- ✅ **Deletion Safeguards**: Requires explicit confirmation before deleting files
-- ✅ **Scope Control**: Only implements what you ask for (no feature creep)
-- ✅ **Auto .gitignore**: Sensitive files automatically excluded
+在 Cursor 中引用：`@01_spec_architect.md` 或 `@02_stdd_architect.md`
 
-## 📚 The Prompt Templates
+### 项目结构
 
-### 01_spec_architect.md
-**Role**: Interviewer Mode  
-**Purpose**: Extract complete Software Requirement Specification (SRS)  
-**Method**: Constraint-first questioning (Tape-out, I/O, PDK)
+\`\`\`
+cursor-agent-pdk/
+├── .cursorrules              # 主规则文件（工作区级别）
+├── scratchpad.md             # 项目记忆和状态追踪
+├── cursor_prompts/           # 提示词模板
+│   ├── 01_spec_architect.md    # 需求分析提示词
+│   ├── 02_stdd_architect.md    # 架构设计提示词
+│   ├── 03_tone_stylist.md      # 写作风格提示词
+│   └── 04_code_reviewer.md     # 代码审查提示词
+├── auto-github-setup.ps1     # GitHub 自动设置脚本
+├── README_TEMPLATE.md         # README 模板
+└── README.md                  # 本文件
+\`\`\`
 
-### 02_stdd_architect.md
-**Role**: Consultant & Scout Mode  
-**Purpose**: Make vs Buy decisions, find existing IP Cores  
-**Method**: Discovery → IP Scouting → Strategy Selection → Spec Generation
+### 使用示例
 
-### 03_tone_stylist.md
-**Role**: Personal Tone Stylist  
-**Purpose**: Mimic your writing style (avoid AI-voice)  
-**Method**: Few-shot learning from your samples
+#### 示例 1：启动新项目
 
-### 04_code_reviewer.md
-**Role**: LVS Tool (Layout vs Schematic)  
-**Purpose**: Security & logic validation  
-**Checks**: API keys, error handling, spec compliance
+\`\`\`
+你：新项目：构建一个任务管理工具
 
-## 🚦 Getting Started
+AI：⚡ 自动识别：检测到逻辑/数据任务。切换到 STDD 模式。阶段 1 启动。
 
-1. **Install**: Copy `.cursorrules` and `cursor_prompts/` to your project
-2. **Configure**: Set up your `.env` file (see `.env.txt` template)
-3. **Start**: Say "New Project..." and watch the magic happen!
+📋 阶段 A1：需求发现
+- 领域：工具/仪表板
+- 访问：本地使用还是公开网页？
+- 数据：需要持久化数据库吗？
+- 预算：有 Vercel/OpenAI 账户吗？
+\`\`\`
 
-## 🤝 Contributing
+#### 示例 2：代码审查
 
-Found a bug? Have an improvement idea? 
+\`\`\`
+你：@04_code_reviewer.md 请审查这段代码
 
-1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+AI：✅ LVS 检查通过。安全检查通过（使用环境变量）。逻辑有效。
+\`\`\`
 
-## 📄 License
+### 安全特性
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- 🔒 **API 密钥保护**：自动检测并阻止硬编码的 API 密钥
+- 🛡️ **文件删除保护**：删除文件前需要明确确认
+- 📝 **环境变量管理**：自动使用 `.env` 文件管理敏感信息
+- ✅ **自动 .gitignore**：敏感文件自动排除在版本控制外
 
-## 🙏 Acknowledgments
+### 高级功能
 
-- Designed for **analog IC designers** transitioning to software development
-- Inspired by **hardware design methodologies** (STDD, LVS, Tape-out)
-- Built for the **Cursor IDE** community
+#### 自定义规则
 
-## ⭐ Star History
+你可以修改 `.cursorrules` 文件来适应你的项目需求：
 
-If you find this useful, please consider giving it a star! ⭐
+- 调整工作流程
+- 添加自定义检查
+- 修改提示词模板引用
+
+#### 集成到现有项目
+
+如果你的项目已经有 `.cursorrules`，可以：
+
+1. 合并规则内容
+2. 保留项目特定的配置
+3. 添加新的提示词模板
+
+## 常见问题
+
+**Q: 这个工具适合所有类型的项目吗？**
+A: 是的，适用于大多数软件开发项目。你可以根据项目特点调整规则。
+
+**Q: 会影响现有的 Cursor 配置吗？**
+A: 不会。这些规则是叠加的，不会覆盖 Cursor 的默认行为。
+
+**Q: 如何禁用某些功能？**
+A: 编辑 `.cursorrules` 文件，注释掉不需要的规则部分。
+
+**Q: 支持哪些编程语言？**
+A: 规则本身是语言无关的，适用于 Python、JavaScript、TypeScript 等所有语言。
+
+**Q: 如何更新到最新版本？**
+A: 定期从仓库拉取更新，或手动复制更新的文件。
+
+## 贡献指南
+
+欢迎提交 Issue 和 Pull Request！
+
+1. Fork 本项目
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启 Pull Request
+
+## 相关资源
+
+- [Cursor IDE 官方文档](https://docs.cursor.com/)
+- [GitHub 仓库](https://github.com/mintianxin-web/cursor-agent-pdk)
+- [问题反馈](https://github.com/mintianxin-web/cursor-agent-pdk/issues)
+
+## 许可证
+
+MIT License
 
 ---
 
-**Made with ❤️ by [@mintianxin-web](https://github.com/mintianxin-web)**
-
-*"Slow is Smooth, Smooth is Fast" - PPA Optimized*
+**让 AI 成为你的编程伙伴，而不是替代品。** 🚀
